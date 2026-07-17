@@ -87,11 +87,12 @@ GBP = 0.741467
 currency_converter/
 │
 ├── currency.py
-├── currency_rate.json
 ├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
+Файл currency_rate.json создается автоматически при первом запуске.
+
 
 ## API
 

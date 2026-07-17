@@ -3,8 +3,6 @@ import requests
 import os
 import time
 
-FAVORITE_CURRENCIES = ["USD", "EUR", "GBP", "RUB"]
-
 
 def get_currency_rates(base: str) -> dict | None:
     url = f"https://open.er-api.com/v6/latest/{base}"
@@ -92,7 +90,12 @@ if __name__ == "__main__":
 
         from_currency = input("\nИз какой валюты: ").upper()
         to_currency = input("В какую валюту: ").upper()
-        amount = float(input("Введите сумму: "))
+
+        try:
+            amount = float(input("Введите сумму: "))
+        except ValueError:
+            print("Введите число.")
+            exit()
 
         result = convert_currency(data, from_currency, to_currency, amount)
 

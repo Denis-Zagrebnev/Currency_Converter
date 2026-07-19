@@ -1,4 +1,1 @@
 requests
-__pycache__/
-*.pyc
-currency_rate.json
